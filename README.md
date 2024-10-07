@@ -1,4 +1,4 @@
-Screenshot:
+Screenshots:
 
 ![image](https://github.com/user-attachments/assets/040a468d-044f-45d4-a59f-e36525a49637)
 
