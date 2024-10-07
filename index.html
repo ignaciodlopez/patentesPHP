@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>License Generator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Amateur Radio License Generator</h1>
+        <form id="licenseForm" onsubmit="openNewTab(event)">
+            <div class="mb-3">
+                <label for="license" class="form-label">Enter your license</label>
+                <input type="text" class="form-control" id="license" name="license" placeholder="E.g.: LU6FID" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Generate License</button>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function openNewTab(event) {
+            event.preventDefault(); // Prevents the traditional form submission
+
+            // Gets the value of the license
+            const license = document.getElementById('license').value;
+
+            // Creates the URL for the new tab
+            const url = `generate_image.php?license=${encodeURIComponent(license)}`;
+
+            // Opens the new tab
+            window.open(url, '_blank');
+        }
+    </script>
+</body>
+</html>
